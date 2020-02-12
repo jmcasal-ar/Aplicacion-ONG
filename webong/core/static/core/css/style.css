@@ -9174,8 +9174,7 @@ textarea.form-control {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-    .ftco-footer-social li a:hover {
-      color: #fff; }
+    
 
 .footer-small-nav > li {
   display: inline-block; }

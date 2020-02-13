@@ -39,7 +39,6 @@
 								<p>La Asociación Civil por el Desarrollo Económico y Social (ACDES) fue creada por un grupo de especialistas en innovación tecnológica junto con profesionales de las ciencias sociales que buscan abordar desde un enfoque multidiscpliario distintas problemáticas relacionadas con los Objetivos de Desarrollo Dostenible (ODS).</p>
 								<p>Nuestra pasión es desarrollar y promover la utilización de las TICs en el ámbito del tercer sector, las empresas privadas, la administración pública, y la ciudadanía. </p>
 								<p>Para ello creemos fundamental la integración de los avances tecnológicos tales como Inteligencia Artificial, IoT, Big Data, Blockchain y criptomonedas con la mirada crítica y el aporte politologos, sociologos, economistas y psicologos, entre otros.</p>
-								<p><a href="#" class="btn btn-primary py-3 px-4">Contact us</a></p>
 							</div>
 						</div>
 					</div>
@@ -187,7 +186,7 @@
 
 
 	<div id="contact">
-		<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+		<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url('{% static 'core/images/image_4.jpg' %}')" >
 			
 			<div class="overlay"></div>
 				<div class="container">
@@ -195,10 +194,10 @@
 						<div class="col-md-6 py-5 px-md-5">
 							<div class="py-md-5">
 						<div class="heading-section heading-section-white ftco-animate mb-5">
-							<h2 class="mb-4">Escribinos</h2>
+							<h2 class="mb-4">Contactanos</h2>
 							<p>Si te interesa participar o vincularte con algunos de nuestros proyectos, esperamos tu contacto.</p>
 						</div>
-						<form action="" method="POST" class="appointment-form ftco-animate">
+						<form action="" method="POST" autocomplete="off" class="appointment-form ftco-animate">
 						{% csrf_token %}
 									<div class="d-md-flex">
 										<div class="form-group">
@@ -246,8 +245,6 @@
 						{% if 'ok' in request.GET %}
 						<p style="color:white"><b>Su mensaje se ha enviado correctamente</b></p>
 						{% endif %}
-						
-						
 						
 						</div>
 				</div>

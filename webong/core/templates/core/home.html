@@ -1,7 +1,8 @@
 {% extends "core/base.html" %}
 {% load static %}
 {% block content %}
-    
+
+<div id="putomov">
     <section class="home-slider owl-carousel">
       <div id="home" class="slider-item" style="background-image: url('{% static 'core/images/mapa.jpg' %}')">
       	<div class="overlay"></div>
@@ -27,6 +28,7 @@
         </div>
       </div>
     </section>
+</div>
 	<div id="about">
 		<section class="ftco-section">
 			<div class="container">
@@ -36,9 +38,9 @@
 							<div class="img" style="background-image: url('{% static 'core/images/ideas.jpg' %}'); border"></div>
 							<div class="text">
 								<h3>Nuestra Visión</h3>
-								<p>La Asociación Civil por el Desarrollo Económico y Social (ACDES) fue creada por un grupo de especialistas en innovación tecnológica junto con profesionales de las ciencias sociales que buscan abordar desde un enfoque multidiscpliario distintas problemáticas relacionadas con los Objetivos de Desarrollo Dostenible (ODS).</p>
+								<p>La Asociación Civil por el Desarrollo Económico y Social (ACDES) fue creada por un grupo de especialistas en innovación tecnológica junto con profesionales de las ciencias sociales que buscan abordar desde un enfoque multidiscpliario distintas problemáticas relacionadas con los Objetivos de Desarrollo Sostenible (ODS).</p>
 								<p>Nuestra pasión es desarrollar y promover la utilización de las TICs en el ámbito del tercer sector, las empresas privadas, la administración pública, y la ciudadanía. </p>
-								<p>Para ello creemos fundamental la integración de los avances tecnológicos tales como Inteligencia Artificial, IoT, Big Data, Blockchain y criptomonedas con la mirada crítica y el aporte politologos, sociologos, economistas y psicologos, entre otros.</p>
+								<p>Para ello creemos fundamental la integración de los avances tecnológicos tales como Inteligencia Artificial, IoT, Big Data, Blockchain y criptomonedas con la mirada crítica y el aporte de politólogos, sociólogos, economistas y psicólogos, entre otros.</p>
 							</div>
 						</div>
 					</div>
@@ -90,7 +92,7 @@
           <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
             <h2 class="mb-0">Sumate a nuestro equipo</h2>
           </div>
-        </div>	
+        </div>
     	</div>
     </section>
 
@@ -106,7 +108,7 @@
         </div>
 				<div class="row no-gutters">
     			<div class="col-md-3">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{% static 'core/images/urbanismo.jpg' %}')">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{% static 'core/images/urbanismo.png' %}')">
     					<div class="overlay"></div>
     					<a href="blog/category/5/ODS/" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
 	    				<div class="text text-center p-4">
@@ -119,8 +121,8 @@
     					<div class="overlay"></div>
     					<a href="blog/category/2/politicas-publicas/" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
 	    				<div class="text text-center p-4">
-	    					<h3><a href="blog/category/2/politicas-publicas/" class= "link">>Monitoreo de Políticas Públicas</a></h3>
-	    				</div>           
+	    					<h3><a href="blog/category/2/politicas-publicas/" class= "link">Monitoreo de Políticas Públicas</a></h3>
+	    				</div>
     				</div>
   				</div>
 
@@ -169,7 +171,7 @@
 									</div>
 								</a>
 								<div class="text bg-white p-4">
-									<h3 class="heading"><a href="#">{{post.title}}</a></h3>
+									<h3 class="heading"><a href="{% url 'blogSingle' post.id post.title|slugify %}">{{post.title}}</a></h3>
 									<p>{{post.subtitle|linebreaks}}</p>
 									<div class="d-flex align-items-center mt-4">
 										<p class="mb-0"><a href="{% url 'blogSingle' post.id post.title|slugify %}" class="btn btn-primary"> Más Info <span class="ion-ios-arrow-round-forward"></span></a></p>
@@ -187,7 +189,7 @@
 
 	<div id="contact">
 		<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url('{% static 'core/images/image_4.jpg' %}')" >
-			
+
 			<div class="overlay"></div>
 				<div class="container">
 					<div class="row justify-content-end">
@@ -245,12 +247,12 @@
 						{% if 'ok' in request.GET %}
 						<p style="color:white"><b>Su mensaje se ha enviado correctamente</b></p>
 						{% endif %}
-						
+
 						</div>
 				</div>
 			</div>
 		</section>
 	</div>
 
-		
+
 {% endblock content %}

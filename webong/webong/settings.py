@@ -25,7 +25,7 @@ SECRET_KEY = '^odbnimo91f2!59&6=9y9zfr4vdfg621-8mxvn#wb5(w706x#m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.acdesweb.org']
 
 
 # Application definition
@@ -121,11 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #Media Config
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Ckeditor
 CKEDITOR_CONFIGS = {
